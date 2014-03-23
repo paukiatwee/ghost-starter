@@ -18,12 +18,13 @@ module.exports = function(grunt) {
     concat: {
       options: {
         stripBanners: true,
-        separator: ';',
+        separator: ';'
       },
       dist: {
-        src: ['assets/js/{,*/}*.js'],
+        src: ['assets/js/{,*/}*.js',
+            '!assets/js/script.js'],
         dest: 'assets/js/script.js'
-      },
+      }
     },
 
     // Minify JavaScript with Uglify
@@ -63,8 +64,8 @@ module.exports = function(grunt) {
       concat: {
         files : ['<%= concat.dist.src %>'],
         tasks: ['concat']
-      },
-    },
+      }
+    }
   });
 
   // Load the plug-ins
@@ -72,7 +73,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default tasks

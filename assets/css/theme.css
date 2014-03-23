@@ -625,19 +625,19 @@ margin on the iframe, cause it breaks stuff. */
   background-size: cover;
 }
 .blog-details {
-  padding-top: 40px;
+  padding-top: 100px;
   padding-bottom: 100px;
   text-align: center;
 }
 .blog-logo img {
   margin-top: 30px;
 }
+.blog-title {
+  padding: 10px 0;
+}
 /*
     ===== Nav =====
 */
-.nav-top {
-  font-size: 18px;
-}
 .nav-top a {
   color: #fff;
 }
