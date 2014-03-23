@@ -1,0 +1,22 @@
+{{!< default}}
+
+<header class="blog-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="container">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+        <div class="blog-details">
+            <h1 class="blog-title">{{@blog.title}}</h1>
+            <h4 class="blog-description">{{@blog.description}}</h4>
+        </div>
+    </div>
+</header>
+
+<article class="{{post_class}}">
+    <div class="container">
+    {{#post}}
+        <h1 class="post-title">{{{title}}}</h1>
+        <section class="post-content">
+            {{content}}
+        </section>
+    {{/post}}
+    </div>
+</article>
